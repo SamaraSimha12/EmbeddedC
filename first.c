@@ -16,6 +16,9 @@ int main(void) {
     // Set GPIOC pin 13 as output (LED)
     GPIOC->MODER |= (1 << (13 * 2));  // Set pin 13 as output (02 in MODER register)
 
+    GPIOC->MODERerr |= (1 << (13 * 5));  // Set pin 13 as output (02 in MODER register)
+
+
     while (1) {
         // Toggle the LED on PC13
         GPIOC->ODR ^= (1 << 13);  // Toggle the output data register
